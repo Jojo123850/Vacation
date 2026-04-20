@@ -229,7 +229,7 @@ form button{
 }
 .group3 .gart{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 50px;
  
 }
@@ -310,4 +310,18 @@ footer li{
 
 }
 
+@media screen and (max-width:768px) {
+    header{
+        flex-wrap: wrap;
+    }
+    .section2{
+        display: flex;
+        flex: 1 0 87%;
+    }
+   .gart{
+    flex: 1 0 87%;
+    margin-bottom: 10px;
+   }
+  
+}
 
