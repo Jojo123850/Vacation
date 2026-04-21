@@ -45,6 +45,10 @@ padding-top: 40px;
 a{
     text-decoration: none;
 }
+a:hover{
+    color: var(--red);
+    transition: all ease-in-out;
+}
 nav li, ul{
     list-style: none;
     padding-left: 0;
@@ -128,6 +132,14 @@ form button{
     border-radius: 10px;
 
 }
+.filtre ul li:hover{
+    background-color: var(--red);
+}
+.filtre ul li a,i:hover{
+    color: var(--white);
+
+}
+
 .filtre h2{
     margin-top: 15px;
 }
@@ -155,6 +167,24 @@ form button{
 }
 .arti{
     padding-left: 15px;
+}
+.rec{
+    position: absolute;
+    border: 1px solid var(--red);
+    color: var(--white);
+    padding: 5px;
+    background-color: var(--red);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -160px;
+    margin-left: 162.72px;
+   
+}
+
+.rec:hover{
+    color: var(--red);
+    background-color: var(--white);
+
 }
 .group1{
     flex:  3;
@@ -190,11 +220,13 @@ form button{
 }
 
 .group1 img, .group2 img{
+    position: relative;
     width: 98%;
     height: 160px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding: 5px;
+    
     
 }
 .group1 a{
@@ -233,7 +265,7 @@ form button{
     margin-bottom: 50px;
  
 }
-.group3 div h3, p, i{
+.group3 div h3,p,i{
     padding-bottom: 20px;
 }
 .gart div{
@@ -247,9 +279,28 @@ align-items: center;
     padding-left: 20px;
 
 }
-.group3 h3, p,i{
-    padding-bottom: 40px;
+.rec1{
+    position: absolute;
+    border: 1px solid var(--red);
+    color: var(--white);
+    margin-left: 4px;
+    padding: 2px;
+    background-color: var(--red);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -220px;
+    margin-right: 162.72px;
+
 }
+.rec1:hover{
+    color: var(--red);
+    background-color: var(--white);
+
+
+}
+/* .group3 h3, p,i{
+    padding-bottom: 40px;
+} */
 
 .section3{
     max-width: 1440px;
@@ -310,18 +361,90 @@ footer li{
 
 }
 
-@media screen and (max-width:768px) {
+@media  screen and (max-width:1024px) {
+    header, .section1, .section2, .section3{
+      padding: 20px;
+    }
+
+    .group1, .group3{
+    flex: 1 0 100%;
+    height: auto;
+    }
+      .group1 div, .group2 div {
+        justify-content: center;
+    }
+    .section3{
+        flex-direction: column;
+    }
+    .section3 article{
+        flex: 1 0 40%;
+        height: auto;
+    }
+    
+
+    
+}
+
+@media  screen and (max-width:768px) {
     header{
+        display: flex;
         flex-wrap: wrap;
     }
-    .section2{
-        display: flex;
-        flex: 1 0 87%;
+    header img{
+        flex: 1 0 100%;
+        height: auto;
+        align-items: center;
     }
-   .gart{
-    flex: 1 0 87%;
-    margin-bottom: 10px;
-   }
-  
+
+    header nav{
+        flex: 1 0 100%;
+
+    }
+
+
+       header, .section1, .section2, .section3{
+      padding: 20px;
+    }
+    .filtre{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .gart{
+    height: auto;
+    flex: 1 0 100%;
+    height: auto;
+    margin-bottom: 30px;
+    }
+      .group1 div, .group2 div {
+        justify-content: center;
+    }
+    .section3{
+        flex-direction: column;
+    }
+    .section3 article{
+        flex: 1 0 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer article{
+        flex: 1 0 100%;
+        margin-bottom: 30px;
+        padding: 0;
+        
+    }
+    
+.artfooter3{
+    padding-right: 0;
+}
+footer h2{
+    padding-left: 0;
+}
+
+    
 }
 
