@@ -227,10 +227,8 @@ form button{
 .group1{
     flex:  3;
      height: 747px; 
-    /* height: auto; */
     background-color: var(--lightgrey);
     padding-top: 50px;
-    /* padding-bottom: 50px; */
     border-radius: 12px;
 
 }
@@ -292,9 +290,8 @@ form button{
 
 
 .group3{
-    /* max-width: 414.05999755859375px; */
+
     flex: 1;
-    /* height: auto; */
     height: 747px; 
     background-color: var(--lightgrey);
     border-radius: 12px;
