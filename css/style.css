@@ -20,7 +20,7 @@ i{
 ul,a,p,h2,h3{
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    color:var(--black)
+    color: var(--black);
 }
 
 h2{
@@ -60,6 +60,31 @@ nav ul{
     justify-content: space-between;
     gap: 50px;
 }
+
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--red);
+    transition: bottom 0.5s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    height: 2px;
+    bottom: 70px;    /* le trait monte de 10px vers le haut */
+}
+
 
 header img{
     width: 180px;
@@ -125,19 +150,28 @@ form button{
     display: flex;
     gap: 20px;
 }
+
+
+
+.filtre ul li a{
+    text-align: center;
+}
 .filtre ul li{
     border: 1px solid var(--red);
-    padding: 10px;
+    padding: 5px;
     color: var(--red);
     border-radius: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
 
 }
 .filtre ul li:hover{
     background-color: var(--red);
 }
-.filtre ul li a,i:hover{
+.filtre ul li:hover a,
+.filtre ul li:hover i {
     color: var(--white);
-
 }
 
 .filtre h2{
@@ -170,14 +204,22 @@ form button{
 }
 .rec{
     position: absolute;
+
+    top: 10px;
+    right: 10px;
+    margin: 0;
+
     border: 1px solid var(--red);
     color: var(--white);
     padding: 5px;
     background-color: var(--red);
     border-radius: 10px;
     text-align: center;
-    margin-top: -160px;
-    margin-left: 162.72px;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 13px;
+    z-index: 1;
+
    
 }
 
@@ -189,10 +231,8 @@ form button{
 .group1{
     flex:  3;
      height: 747px; 
-    /* height: auto; */
     background-color: var(--lightgrey);
     padding-top: 50px;
-    /* padding-bottom: 50px; */
     border-radius: 12px;
 
 }
@@ -208,6 +248,7 @@ form button{
 }
 
 .gart{
+    position: relative;
     flex: 1 0 27%;
     background-color: var(--white);
     border-top-left-radius: 12px;
@@ -217,6 +258,20 @@ form button{
     margin-right: 30px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 
+}
+
+.gart:hover{
+    color: #c1c1c1;
+    transition:  all ease-in-out;
+}
+.gart:hover img{
+     filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+
+}
+.section3 article:hover img {
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
 }
 
 .group1 img, .group2 img{
@@ -240,9 +295,7 @@ form button{
 
 
 .group3{
-    /* max-width: 414.05999755859375px; */
     flex: 1;
-    /* height: auto; */
     height: 747px; 
     background-color: var(--lightgrey);
     border-radius: 12px;
@@ -265,7 +318,7 @@ form button{
     margin-bottom: 50px;
  
 }
-.group3 div h3,p,i{
+.group3 div h3,p,.arti i{
     padding-bottom: 20px;
 }
 .gart div{
@@ -281,15 +334,20 @@ align-items: center;
 }
 .rec1{
     position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0;
     border: 1px solid var(--red);
     color: var(--white);
-    margin-left: 4px;
-    padding: 2px;
+    padding: 5px;
     background-color: var(--red);
     border-radius: 10px;
     text-align: center;
-    margin-top: -220px;
-    margin-right: 162.72px;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 13px;
+    z-index: 1;
+  
 
 }
 .rec1:hover{
@@ -347,6 +405,7 @@ footer{
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
+
 
 footer ul{
     padding-top: 10px;
