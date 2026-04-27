@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -267,8 +268,7 @@ form button{
 .group1 .gdiv{
     display: flex;
     flex-wrap: wrap;
-    padding-left: 22px;
-    padding-bottom: 25px;
+    gap: 20px;
     
 }
 
@@ -280,7 +280,6 @@ form button{
     border-top-right-radius: 12px;
      border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    /* margin-right: 30px; */
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 
@@ -306,7 +305,8 @@ form button{
 
 .group1 img, .group2 img{
     position: relative;
-    width: 96%; 
+    width: 100%;
+    display: block; 
     height: 160px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -314,9 +314,10 @@ form button{
     
     
 }
-/* .group1 a{
-    padding-left: 25px;
-} */
+.group1 .gart{
+   gap: 10px;
+}
+
 .section2 span i{
     color: var(--grey);
     padding-top: 5px;
@@ -335,17 +336,17 @@ form button{
     border-radius: 12px;
       padding-top: 50px;
 }
-.group3 div{
+.group3{
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
-/* .group3 .gart{
-    margin-left: 20px;
-} */
+
 .group3 .gdiv3{
        padding-left: 10px;
+}
+.group3 .gart a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .group3 img{
     width: 30%;
@@ -353,22 +354,24 @@ form button{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     padding: 5px;
+    object-fit: cover;
     
 }
-/* .group3 article a{
+.group3 .content{
     display: flex;
- /* flex-wrap: wrap;  */
-    margin-bottom: 50px;
-    align-items: center;
- 
-} */
-.group3 div h3,p,.arti i{
+    flex-direction: column; 
+    justify-content: center;
+     flex: 1; 
+}
+
+
+.group3 div h3,
+.group3 .arti i{
     padding-bottom: 20px;
 }
-/* .gart div{
-    padding-left: 20px;
-align-items: center;
-} */
+.group3 div p{
+    padding: 10px;
+}
 .arti3{
     flex: 1;
     display: flex;
@@ -400,14 +403,11 @@ align-items: center;
 
 
 }
-/* .group3 h3, p,i{
-    padding-bottom: 40px;
-} */
+
 
 .section3{
     max-width: 1440px;
-margin-top: 100px;
-    /* background-color: var(--lightgrey); */
+    margin-top: 100px;
     margin-bottom: 10px;
 }
 
